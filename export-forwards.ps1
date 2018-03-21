@@ -1,0 +1,1 @@
+get-mailbox |? {$_.ForwardingAddress -ne $null -or $_.ForwardingSmtpAddress -ne $null} |select name, for* |export-csv -path c:\temp\forwards.csv -notypeinformation
